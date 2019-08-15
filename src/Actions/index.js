@@ -1,0 +1,10 @@
+export {
+    getQuote,
+    FETCH_RANDOM_QUOTE_START,
+    FETCH_RANDOM_QUOTE_SUCCESS,
+    FETCH_RANDOM_QUOTE_FAILURE,
+    getAllQuote,
+    FETCH_ALL_QUOTE_START,
+    FETCH_ALL_QUOTE_SUCCESS,
+    FETCH_ALL_QUOTE_FAILURE
+} from "./quoteActions"
