@@ -148,7 +148,7 @@ const QuoteSection = ({ props }) => {
     <div className={classes.Container}>
       <img className={classes.img} src={seinfeldLogo} alt="seinfeld logo" />
       <h3 className={classes.quoteText}>Quotes</h3>
-      <h2 className = {classes.heading}>Random Quote Guessing Game</h2>
+      <h2 className = {classes.heading}>Are Your Master Of Your Domain?</h2>
       <button className={classes.Button} onClick={() => showRandom()}>Click For Quote
       </button>
       {props.randomquote && (
