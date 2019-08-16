@@ -58,7 +58,7 @@ const useStyles = makeStyles({
     textDecoration: "none",
   },
   textDiv: {
-    width: "500px",
+    width: "460px",
     height: "300px",
     margin: "10px",
     backgroundImage: `url(${seinfeldCharacters}) `,
