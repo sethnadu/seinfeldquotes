@@ -101,7 +101,8 @@ const useStyles = makeStyles({
    display: "flex",
    flexDirection: "row wrap",
    height: "40px",
-   bottom: 0
+   marginBottom: "30px"
+  
   },
   heading: {
     color: "#e22121"
