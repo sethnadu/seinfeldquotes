@@ -46,7 +46,7 @@ const useStyles = makeStyles({
     marginLeft: "180px",
     marginTop: "-10px",
     fontSize: "2rem",
-    color: "#e22121",
+    color: "#fcd720",
   },
   copyright: {
     bottom: "0",
