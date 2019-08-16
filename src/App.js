@@ -19,7 +19,8 @@ const mapStateToProps = state => {
     isLoading: state.isLoading,
     noStateApi: state.noStateApi,
     allQuote: state.allQuote,
-    noStateApiAll: state.noStateApiAll
+    noStateApiAll: state.noStateApiAll,
+    nameHidden: state.nameHidden
   }
 }
 

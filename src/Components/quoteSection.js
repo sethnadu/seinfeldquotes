@@ -67,7 +67,7 @@ const useStyles = makeStyles({
   text: {
     backgroundColor: "#1d4ba0",
     width: "300px",
-    margin: "10px auto 10px auto",
+    margin: "80px auto 10px auto",
     padding: "10px",
     opacity: ".9",
   },
@@ -103,36 +103,52 @@ const useStyles = makeStyles({
    height: "40px",
    bottom: 0
   },
+  heading: {
+    color: "#e22121"
+  },
+  line: {
+    border: "2px solid #fcd720",
+    width: "100%",
+    margin: "50px 20px auto 20px"
+  }
 });
 
 const QuoteSection = ({ props }) => {
   const [name, setName] = useState("");
+  const [showName, setShowName] = useState(false)
+
+  const showNameAnswer = () => {
+    return (
+      setName(true)
+    )
+  
+  }
 
   const classes = useStyles();
-
-  //   const buttonsChange = () => {
-  //       console.log(name)
-  //      if (name === "") {
-  //         return props.getQuote
-  //       } else {
-  //        return props.getAllQuote
-  //      }
-  //      }
 
   const handleChange = event => {
     setName(event.target.value);
   };
+
+  const showRandom = () => {
+    props.getQuote()
+    setShowName(false)
+
+  }
+  
 
   return (
  
     <div className={classes.Container}>
       <img className={classes.img} src={seinfeldLogo} alt="seinfeld logo" />
       <h3 className={classes.quoteText}>Quotes</h3>
-      <button className={classes.Button} onClick={props.getQuote}>Click for Random Quote
+      <h2 className = {classes.heading}>Random Quote Guessing Game</h2>
+      <button className={classes.Button} onClick={() => showRandom()}>Click For Quote
       </button>
       {props.randomquote && (
-        <Quote noStateApi={props.noStateApi} randomquote={props.randomquote} />
+        <Quote showName= {showName} setShowName = {setShowName} showNameAnswer= {showNameAnswer} noStateApi={props.noStateApi} randomquote={props.randomquote} />
       )}
+      <div className = {classes.line}/>
       <p className={classes.text}>
         Giddy Up! Pick name below to display quotes!
       </p>

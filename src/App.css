@@ -35,3 +35,10 @@
     transform: rotate(360deg);
   }
 }
+
+.title{
+  font-size: 1.6rem;
+  color: #e22121;
+  display: "none"
+}
+

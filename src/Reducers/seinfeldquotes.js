@@ -15,7 +15,8 @@ const initialState = {
     isLoading: false,
     error: "",
     noStateApi: true,
-    noStateApiAll: true
+    noStateApiAll: true,
+    // nameHidden: true,
 };
 
 export const randomQuote = ( state = initialState, action) => {
@@ -64,6 +65,12 @@ export const randomQuote = ( state = initialState, action) => {
                 error: action.payload,
                 noStateApiAll: false
             };
+
+        // case "SHOW_NAME":
+        //     return {
+        //         ...state,
+        //         nameHidden: false,
+        //     }
        
         default:
             return state

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
@@ -25,6 +25,12 @@ const useStyles = makeStyles({
   },
   changeFont: {
     fontSize: "1rem"
+  },
+  showAnswerButton: {
+    backgroundColor: "#fcd720",
+    color: "#e22121",
+    fontSize: "1rem",
+    border: "none"
   }
 });
 
@@ -36,12 +42,13 @@ const Quote = props => {
     <> {props.noStateApi !== true && 
     <Card className={classes.card}>
       <CardContent>
+        <button className={classes.showAnswerButton} onClick = {() => props.setShowName(true)}>(Show Answer)</button>
         <Typography
           className={classes.title}
           color="textSecondary"
           gutterBottom
         >
-          {props.randomquote.author}
+          {props.showName === true ? props.randomquote.author : ""}
         </Typography>
         <Typography variant="h5" component="h2">
           "{props.randomquote.quote}"
