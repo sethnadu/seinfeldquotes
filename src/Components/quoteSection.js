@@ -165,45 +165,48 @@ const QuoteSection = ({ props }) => {
             <option value="Jerry">Jerry</option>
             <option value="George">George</option>
             <option value="Elaine">Elaine</option>
-            <option value="Kramer">Kramer</option>
-            <option value="Alton Benes(Elaines Father)">Elaines Father</option>
-            <option value="Bill">Bill</option>
-            <option value="Antonio(The Busboy)">The Busboy</option>
-            <option value="Lt. Bookman">Lt. Bookman</option>
-            <option value="Sid">Sid</option>
-            <option value="Old Man Looking At Painting Of Kramer">
-              Old Man Looking At Painting Of Kramer
-            </option>
-            <option value="Morty">Morty</option>
-            <option value="Newman">Newman</option>
-            <option value="The Bubble Boy">The Bubble Boy</option>
-            <option value="Joe Davola">Joe Davola</option>
-            <option value="George's Mom">George's Mom</option>
-            <option value="Ticket Lady(Describing George)">
-              Ticket Lady(Describing George)
-            </option>
+            <option value="Kramer">Kramer</option> 
             <option value="Babu">Babu</option>
-            <option value="Susan">Susan</option>
-            <option value="Wheelchair Salesman">Wheelchair Salesman</option>
-            <option value="TV Kramer (to George)">TV Kramer (to George)</option>
-            <option value="Jerry's Mom">Jerry's Mom</option>
+            <option value="Banya">Banya</option>
+            <option value="Bill">Bill</option>
+            <option value="The Bubble Boy">The Bubble Boy</option>
+            <option value="Antonio(The Busboy)">The Busboy</option>
+            <option value="The Detective(After Jerry's mechanic steals his car.)">
+              The Detective(After Jerry's mechanic steals his car.)
+            </option>
+            <option value="Alton Benes(Elaines Father)">Elaines Father</option>
+            <option value="Frank Costanza">Frank Costanza</option>
+            <option value="George's Mom">George's Mom</option>
             <option value="George and Jerry">George and Jerry</option>
+            <option value="George Steinbrenner">George Steinbrenner</option>
+            <option value="Jerry's Mom">Helen Seinfeld</option>
+            <option value="Jackie Chiles">Jackie Chiles</option>
+            <option value="Joe Davola">Joe Davola</option>
             <option value="Kramer and Jerry">Kramer and Jerry</option>
             <option value="Kramer and Frank Costanza">
               Kramer and Frank Costanza
             </option>
-            <option value="George Steinbrenner">George Steinbrenner</option>
-            <option value="The Soup Nazi">The Soup Nazi</option>
-            <option value="Frank Costanza">Frank Costanza</option>
-            <option value="The Detective(After Jerry's mechanic steals his car.)">
-              The Detective(After Jerry's mechanic steals his car.)
-            </option>
-            <option value="Wyck">Wyck</option>
-            <option value="Banya">Banya</option>
-            <option value="Jackie Chiles">Jackie Chiles</option>
-            <option value="Riley">Riley</option>
             <option value="Lloyd Brawn">Lloyd Brawn</option>
-            <option value="Frank Costanza">Frank Costanza</option>
+            <option value="Lt. Bookman">Lt. Bookman</option>
+            <option value="Morty">Morty</option>
+            <option value="Newman">Newman</option>
+            <option value="Old Man Looking At Painting Of Kramer">
+              Old Man Looking At Painting Of Kramer
+            </option>
+            <option value="Riley">Riley</option>
+            <option value="Sid">Sid</option>
+            <option value="The Soup Nazi">The Soup Nazi</option>
+            <option value="Susan">Susan</option>
+             <option value="Ticket Lady(Describing George)">
+              Ticket Lady(Describing George)
+            </option>
+            <option value="TV Kramer (to George)">TV Kramer (to George)</option>
+            <option value="Wheelchair Salesman">Wheelchair Salesman</option>
+            <option value="Wyck">Wyck</option>
+        
+            
+            
+           
           </select>
         </div>
       </div>
