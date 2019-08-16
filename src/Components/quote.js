@@ -42,7 +42,6 @@ const Quote = props => {
     <> {props.noStateApi !== true && 
     <Card className={classes.card}>
       <CardContent>
-        <button className={classes.showAnswerButton} onClick = {() => props.setShowName(true)}>(Show Answer)</button>
         <Typography
           className={classes.title}
           color="textSecondary"
@@ -59,6 +58,7 @@ const Quote = props => {
           Episode: <span className={classes.title}>{props.randomquote.episode}</span>
         </Typography>
       </CardContent>
+      <button className={classes.showAnswerButton} onClick = {() => props.setShowName(true)}>(Show Answer)</button>
       <CardActions />
     </Card>
     }</>
