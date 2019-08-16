@@ -63,7 +63,7 @@ const useStyles = makeStyles({
     margin: "10px",
     backgroundImage: `url(${seinfeldCharacters}) `,
     backgroundSize: "cover",
-    backgroundPosition: "center"
+    backgroundPosition: "center",
   },
   text: {
     backgroundColor: "#1d4ba0",
@@ -99,36 +99,32 @@ const useStyles = makeStyles({
     textAlign: "center",
   },
   copyrightDiv: {
-   display: "flex",
-   flexDirection: "row wrap",
-   height: "40px",
-   marginBottom: "30px"
-  
+    display: "flex",
+    flexDirection: "row wrap",
+    height: "40px",
+    marginBottom: "30px",
   },
   heading: {
-    color: "#e22121"
+    color: "#e22121",
   },
   line: {
     border: "2px solid #fcd720",
     width: "100%",
-    margin: "50px 20px auto 20px"
+    margin: "50px 20px auto 20px",
   },
   select: {
     height: "30px",
     border: "2px solid #fcd720",
-  }
+  },
 });
 
 const QuoteSection = ({ props }) => {
   const [name, setName] = useState("");
-  const [showName, setShowName] = useState(false)
+  const [showName, setShowName] = useState(false);
 
   const showNameAnswer = () => {
-    return (
-      setName(true)
-    )
-  
-  }
+    return setName(true);
+  };
 
   const classes = useStyles();
 
@@ -137,35 +133,43 @@ const QuoteSection = ({ props }) => {
   };
 
   const showRandom = () => {
-    props.getQuote()
-    setShowName(false)
-
-  }
-  
+    props.getQuote();
+    setShowName(false);
+  };
 
   return (
- 
     <div className={classes.Container}>
       <img className={classes.img} src={seinfeldLogo} alt="seinfeld logo" />
       <h3 className={classes.quoteText}>Quotes</h3>
-      <h2 className = {classes.heading}>Are Your Master Of Your Domain?</h2>
-      <button className={classes.Button} onClick={() => showRandom()}>Click For Quote
+      <h2 className={classes.heading}>Are Your Master Of Your Domain?</h2>
+      <button className={classes.Button} onClick={() => showRandom()}>
+        Click For Quote
       </button>
       {props.randomquote && (
-        <Quote showName= {showName} setShowName = {setShowName} showNameAnswer= {showNameAnswer} noStateApi={props.noStateApi} randomquote={props.randomquote} />
+        <Quote
+          showName={showName}
+          setShowName={setShowName}
+          showNameAnswer={showNameAnswer}
+          noStateApi={props.noStateApi}
+          randomquote={props.randomquote}
+        />
       )}
-      <div className = {classes.line}/>
+      <div className={classes.line} />
       <p className={classes.text}>
         Giddy Up! Pick name below to display quotes!
       </p>
       <div className={classes.textDiv}>
         <div className={classes.searchForm}>
-          <select className = {classes.select} onChange={handleChange} onClick={props.getAllQuote}>
+          <select
+            className={classes.select}
+            onChange={handleChange}
+            onClick={props.getAllQuote}
+          >
             <option>Pick Below</option>
             <option value="Jerry">Jerry</option>
             <option value="George">George</option>
             <option value="Elaine">Elaine</option>
-            <option value="Kramer">Kramer</option> 
+            <option value="Kramer">Kramer</option>
             <option value="Babu">Babu</option>
             <option value="Banya">Banya</option>
             <option value="Bill">Bill</option>
@@ -197,25 +201,21 @@ const QuoteSection = ({ props }) => {
             <option value="Sid">Sid</option>
             <option value="The Soup Nazi">The Soup Nazi</option>
             <option value="Susan">Susan</option>
-             <option value="Ticket Lady(Describing George)">
+            <option value="Ticket Lady(Describing George)">
               Ticket Lady(Describing George)
             </option>
             <option value="TV Kramer (to George)">TV Kramer (to George)</option>
             <option value="Wheelchair Salesman">Wheelchair Salesman</option>
             <option value="Wyck">Wyck</option>
-        
-            
-            
-           
           </select>
         </div>
       </div>
 
       {props.isLoading ? (
-          <Loader type="ThreeDots" color="#e22121" height={15} width={100} />
-        ) : (
-          ""
-        )}
+        <Loader type="ThreeDots" color="#e22121" height={15} width={100} />
+      ) : (
+        ""
+      )}
 
       {props.allQuote &&
         props.allQuote.map((item, index) => {
@@ -229,24 +229,28 @@ const QuoteSection = ({ props }) => {
             )
           );
         })}
-   
 
       <div className={classes.copyrightDiv}>
-      <p className={classes.copyright}>Quotes from </p>
-      <p>
-        <a
-          className={classes.address}
-          href="https://seinfeld-quotes.herokuapp.com/"
-        >
-          https://seinfeld-quotes.herokuapp.com/
-        </a>
-      </p>
-      <p className={classes.copyright}>Created by:<a className={classes.address} href="https://github.com/sethnadu/seinfeldquotes">sethnadu</a></p>
+        <p className={classes.copyright}>Quotes from </p>
+        <p>
+          <a
+            className={classes.address}
+            href="https://seinfeld-quotes.herokuapp.com/"
+          >
+            https://seinfeld-quotes.herokuapp.com/
+          </a>
+        </p>
+        <p className={classes.copyright}>
+          Created by:
+          <a
+            className={classes.address}
+            href="https://github.com/sethnadu"
+          >
+            sethnadu
+          </a>
+        </p>
       </div>
-
-
     </div>
-
   );
 };
 
