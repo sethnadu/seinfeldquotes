@@ -88,7 +88,7 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    margin: "80px auto auto auto",
+    margin: "120px auto auto auto",
   },
   inputForm: {
     margin: "auto auto 60px auto",
@@ -110,6 +110,10 @@ const useStyles = makeStyles({
     border: "2px solid #fcd720",
     width: "100%",
     margin: "50px 20px auto 20px"
+  },
+  select: {
+    height: "30px",
+    border: "2px solid #fcd720",
   }
 });
 
@@ -154,7 +158,7 @@ const QuoteSection = ({ props }) => {
       </p>
       <div className={classes.textDiv}>
         <div className={classes.searchForm}>
-          <select onChange={handleChange} onClick={props.getAllQuote}>
+          <select className = {classes.select} onChange={handleChange} onClick={props.getAllQuote}>
             <option>Pick Below</option>
             <option value="Jerry">Jerry</option>
             <option value="George">George</option>
