@@ -58,11 +58,12 @@ const useStyles = makeStyles({
     textDecoration: "none",
   },
   textDiv: {
-    width: "440px",
+    width: "400px",
     height: "300px",
     margin: "10px",
     backgroundImage: `url(${seinfeldCharacters}) `,
     backgroundSize: "cover",
+    backgroundPosition: "center"
   },
   text: {
     backgroundColor: "#1d4ba0",
