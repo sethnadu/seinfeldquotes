@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Loader from "react-loader-spinner";
-import {BrowserRouter as Router, Switch} from "react-router-dom";
+// import {BrowserRouter as Router, Switch} from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 
 import Quote from "./quote.js";
@@ -97,6 +97,12 @@ const useStyles = makeStyles({
     borderRadius: "10px",
     textAlign: "center",
   },
+  copyrightDiv: {
+   display: "flex",
+   flexDirection: "row wrap",
+   height: "40px",
+   bottom: 0
+  },
 });
 
 const QuoteSection = ({ props }) => {
@@ -118,19 +124,18 @@ const QuoteSection = ({ props }) => {
   };
 
   return (
-      <Router>
+ 
     <div className={classes.Container}>
       <img className={classes.img} src={seinfeldLogo} alt="seinfeld logo" />
       <h3 className={classes.quoteText}>Quotes</h3>
-      <p className={classes.text}>
-        Leave blank and click for random quote or enter in a name to search for
-        specific characters quote
-      </p>
       <button className={classes.Button} onClick={props.getQuote}>Click for Random Quote
       </button>
       {props.randomquote && (
         <Quote noStateApi={props.noStateApi} randomquote={props.randomquote} />
       )}
+      <p className={classes.text}>
+        Giddy Up! Pick name below to display quotes!
+      </p>
       <div className={classes.textDiv}>
         <div className={classes.searchForm}>
           <select onChange={handleChange} onClick={props.getAllQuote}>
@@ -201,7 +206,7 @@ const QuoteSection = ({ props }) => {
         })}
    
 
-
+      <div className={classes.copyrightDiv}>
       <p className={classes.copyright}>Quotes from </p>
       <p>
         <a
@@ -211,8 +216,12 @@ const QuoteSection = ({ props }) => {
           https://seinfeld-quotes.herokuapp.com/
         </a>
       </p>
+      <p className={classes.copyright}>Created by:<a className={classes.address} href="https://github.com/sethnadu/seinfeldquotes">sethnadu</a></p>
+      </div>
+
+
     </div>
-    </Router>
+
   );
 };
 
